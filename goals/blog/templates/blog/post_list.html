@@ -1,15 +1,14 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html>
 	<head>
+		<link href="https://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    	<link rel="stylesheet" href="{% static 'css/blog.css' %}">
 		<title>Prueba plantilla</title>
 	</head>
 	<body>
-		<div>
-			<p>published: 04.07.2016, 14:54</p>
-		    <h2><a href="">Post desde windows</a></h2>
-		    <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-		</div>
-		
 		{% for post in posts %}
 			<div>
 				<p>Publicado: {{ post.published_date }}</p>
